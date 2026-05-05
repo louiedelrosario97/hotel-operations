@@ -1,6 +1,7 @@
 package com.pluralsight;
 
 public class Room
+
 {
     // Declared Variables
     private int numberOfBeds;

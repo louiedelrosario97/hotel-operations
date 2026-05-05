@@ -1,6 +1,9 @@
 package com.pluralsight;
 
-public class Reservation {   // Declared Variables
+public class Reservation
+
+{
+    // Declared Variables
     private String roomType;
     private int numberOfNights;
     private boolean isWeekend;
