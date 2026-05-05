@@ -1,5 +1,5 @@
 package com.pluralsight;
-//
+
 public class Employee
 
 {
@@ -9,6 +9,7 @@ public class Employee
     private String department;
     private double payRate;
     private double hoursWorked;
+    private double otHours;
 
     // Constructor
     public Employee(String employeeID, String name, String department, double payRate, double hoursWorked) {
@@ -25,6 +26,7 @@ public class Employee
     public String getDepartment() { return department; }
     public double getPayRate() { return payRate; }
     public double getHoursWorked() { return hoursWorked; }
+    public double getOtHours() { return otHours; }
 
     // Derived Getters
     public double getRegularHours()
@@ -36,12 +38,13 @@ public class Employee
 
     public double getOvertimeHours()
     {
-        if (hoursWorked >= 40) { return }
+        if (hoursWorked > 40) { return hoursWorked - 40; }
+        else { return 0; }
     }
 
     public double getTotalPay()
     {
-
+        { return (payRate * hoursWorked) + (payRate * otHours); }
     }
 
 }
