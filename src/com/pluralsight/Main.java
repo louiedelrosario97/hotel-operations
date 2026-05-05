@@ -3,8 +3,11 @@ package com.pluralsight;
 public class Main {
     static void main()
     {
-    Employee Justin = new Employee("67", "Justin", "Manager", 51.25, 50.00000232323);
+    Employee Justin = new Employee("67", "Justin", "Manager", 50, 6);
 
-    System.out.printf("%.2f",Justin.getTotalPay());
+    System.out.println(Justin.getHoursWorked());
+    Justin.punchTimeCard(10, 11);
+    System.out.println(Justin.getHoursWorked());
+
     }
 }
