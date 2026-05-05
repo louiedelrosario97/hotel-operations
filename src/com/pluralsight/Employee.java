@@ -53,4 +53,3 @@ public class Employee
         this.hoursWorked += punchOut - punchIn;
     }
 }
-
