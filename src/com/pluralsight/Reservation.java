@@ -26,7 +26,6 @@ public class Reservation
     public void setIsWeekend(boolean weekend) { isWeekend = weekend; }
 
     // Derived Getters
-
     public double getReservationTotal()
     {
         return getPrice() * numberOfNights;
@@ -42,5 +41,4 @@ public class Reservation
         if (isWeekend) { return rate * 1.10; }
         else { return rate; }
     }
-
 }

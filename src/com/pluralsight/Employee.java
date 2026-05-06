@@ -1,5 +1,7 @@
 package com.pluralsight;
 
+import java.time.LocalDateTime;
+
 public class Employee
 
 {
@@ -12,7 +14,8 @@ public class Employee
     private double otHours;
 
     // Constructor
-    public Employee(String employeeID, String name, String department, double payRate, double hoursWorked) {
+    public Employee(String employeeID, String name, String department, double payRate, double hoursWorked)
+    {
         this.employeeID = employeeID;
         this.name = name;
         this.department = department;
@@ -35,7 +38,6 @@ public class Employee
         else { return 40; }
     }
 
-
     public double getOvertimeHours()
     {
         if (hoursWorked > 40) { return hoursWorked - 40; }
@@ -51,5 +53,14 @@ public class Employee
     public void punchTimeCard(double punchIn, double punchOut)
     {
         this.hoursWorked += punchOut - punchIn;
+    }
+
+    public void punchIn()
+    {
+        LocalDateTime now = LocalDateTime.now();
+    }
+    public void punchOut()
+    {
+        LocalDateTime now = LocalDateTime.now();
     }
 }
